@@ -1,7 +1,7 @@
-    .section .text
-    .global _start
+section .text
+    global _start
 
 _start:
-    mov $60, %rax        # syscall: exit
-    mov $42, %rdi        # status code
+    mov     rax, 60        ; syscall number for exit
+    mov     rdi, 42        ; exit code 42
     syscall
